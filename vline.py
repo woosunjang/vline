@@ -43,7 +43,7 @@ def vline_plotter(args):
 
         with open(outname, "w") as out:
             out.write("IGOR\n")
-            out.write("WAVES/D " + system_name + "_" + direction + " " + system_name + "_locpot\n")
+            out.write("WAVES/D " + system_name + "_" + direction + " " + system_name + "_locpot_" + direction + "\n")
             out.write("BEGIN\n")
             
             # for line in vline_lines:
@@ -76,8 +76,8 @@ X Label left "\\Z28 Local Potential (eV)"
 X Label bottom "\\Z28 z (a.u)"
 """
     
-            out.write("X Display " + system_name + "_locpot" + " vs " + system_name + "_" + direction + " as " + '"' +
-                      system_name + "_locpot_" + direction + '"' + "\n")
+            out.write("X Display " + system_name + "_locpot_" + direction + " vs " + system_name + "_" + direction
+                      + " as " + '"' + system_name + "_locpot_" + direction + '"' + "\n")
             out.write(preset)
 
 
